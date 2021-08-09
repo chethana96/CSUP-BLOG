@@ -1,20 +1,28 @@
-import Logo from '../img/Logo.jpg'
+import { Link } from 'react-router-dom';
+import Logo from '../img/logo1.png';
 
 function Header() {
-    return (
+   return (
         <header>
             <div className="header-container">
                 <div className="right-menu">
-                    {/*<img src={Logo} alt='Logo'/>*/}
-                    <a href='/'>CSUP BLOG</a>
+                    <div className="logo">
+                        <img src={ Logo } alt="Logo" />
+                    </div>
+                    {/*<a href="/">CSUP BLOG</a>*/}
+
+                    <Link to="/">CSUP BLOG</Link>
                 </div>
+                
                 <div className="left-menu">
-                    <a href="/">Home</a>
-                    <a href="/create" className="button-container">Add Post</a>
+                    {/*<a href="/">Home</a>*/}
+                    <Link to="/">Home</Link>
+                    <Link to='/create' className="button-container">Add Post</Link>
                 </div>
-            </div>  
+
+            </div>
         </header>
     );
 }
 
-export default Header
+export default Header;
